@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Skills</title>
+  <!-- Bootstrap CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #0d1117;
+      color: #ffffff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #58a6ff;
+      margin-bottom: 2rem;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .skills {
+      display: flex;
+      justify-content: space-between;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .skills-column {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .skill {
+      margin-bottom: 1.5rem;
+    }
+
+    .skill-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .progress-bar {
+      position: relative;
+      background: #161b22;
+      border: 1px solid #58a6ff;
+      border-radius: 5px;
+      overflow: hidden;
+      height: 20px;
+    }
+
+    .progress-bar-inner {
+      background: #58a6ff;
+      height: 100%;
+      width: 0;
+      transition: width 0.3s;
+    }
+
+    .btn {
+      background: #238636;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      margin-left: 5px;
+      cursor: pointer;
+      font-size: 0.8rem;
+    }
+
+    .btn:hover {
+      background: #2ea043;
+    }
+
+    .navbar-nav .nav-link {
+      position: relative;
+      color: white !important;
+      margin: 0 10px;
+      font-weight: 500;
+      padding: 5px 0;
+      transition: color 0.3s ease-in-out;
+    }
+
+    .navbar-nav .nav-link::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background: #2f8fe4;
+      transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+    }
+
+    .navbar-nav .nav-link:hover::before {
+      width: 100%;
+      left: 0;
+    }
+
+    .navbar-nav .nav-link:hover {
+      color: #2f8fe4 !important;
+      text-shadow: 0 0 8px #2f8fe4;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Proper Header Navbar -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3">
+      <a class="navbar-brand d-flex align-items-center" href="MySkills.html">
+        <img src="Images/img.jpg" alt="Logo" style="width: 35px; height: 35px; border-radius: 50%; margin-right: 10px;">
+        Punith C R.
+    </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="AboutMe.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="MyJourney.html">Education</a></li>
+          <li class="nav-item"><a class="nav-link" href="MySkills.html">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="ContactMe.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h1>My <span style="color: #ffffff;">Skills</span></h1>
+    <div class="skills">
+      <!-- Coding Skills Column -->
+      <div class="skills-column">
+        <h2>Coding Skills</h2>
+
+        <div class="skill">
+          <div class="skill-title">
+            <span>HTML</span><span><span id="html-percentage">90</span>%</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-bar-inner" id="html-bar" style="width: 90%;"></div>
+          </div>
+          <button class="btn" onclick="adjustSkill('html', 10)">+</button>
+          <button class="btn" onclick="adjustSkill('html', -10)">-</button>
+        </div>
+
+        <div class="skill">
+          <div class="skill-title">
+            <span>Java</span><span><span id="css-percentage">80</span>%</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-bar-inner" id="css-bar" style="width: 80%;"></div>
+          </div>
+          <button class="btn" onclick="adjustSkill('css', 10)">+</button>
+          <button class="btn" onclick="adjustSkill('css', -10)">-</button>
+        </div>
+
+        <div class="skill">
+          <div class="skill-title">
+            <span>MySQL</span><span><span id="javascript-percentage">65</span>%</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-bar-inner" id="javascript-bar" style="width: 65%;"></div>
+          </div>
+          <button class="btn" onclick="adjustSkill('javascript', 10)">+</button>
+          <button class="btn" onclick="adjustSkill('javascript', -10)">-</button>
+        </div>
+
+        <div class="skill">
+          <div class="skill-title">
+            <span>Spring Boot</span><span><span id="python-percentage">75</span>%</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-bar-inner" id="python-bar" style="width: 75%;"></div>
+          </div>
+          <button class="btn" onclick="adjustSkill('python', 10)">+</button>
+          <button class="btn" onclick="adjustSkill('python', -10)">-</button>
+        </div>
+      </div>
+
+      <!-- Professional Skills Column -->
+      <div class="skills-column">
+        <h2>Professional Skills</h2>
+
+        <div class="skill">
+          <div class="skill-title">
+            <span>Web Design</span><span><span id="webdesign-percentage">95</span>%</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-bar-inner" id="webdesign-bar" style="width: 95%;"></div>
+          </div>
+          <button class="btn" onclick="adjustSkill('webdesign', 10)">+</button>
+          <button class="btn" onclick="adjustSkill('webdesign', -10)">-</button>
+        </div>
+
+        <div class="skill">
+          <div class="skill-title">
+            <span>Web Development</span><span><span id="webdev-percentage">67</span>%</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-bar-inner" id="webdev-bar" style="width: 67%;"></div>
+          </div>
+          <button class="btn" onclick="adjustSkill('webdev', 10)">+</button>
+          <button class="btn" onclick="adjustSkill('webdev', -10)">-</button>
+        </div>
+
+        <div class="skill">
+          <div class="skill-title">
+            <span>Graphic Design</span><span><span id="graphicdesign-percentage">85</span>%</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-bar-inner" id="graphicdesign-bar" style="width: 85%;"></div>
+          </div>
+          <button class="btn" onclick="adjustSkill('graphicdesign', 10)">+</button>
+          <button class="btn" onclick="adjustSkill('graphicdesign', -10)">-</button>
+        </div>
+
+        <div class="skill">
+          <div class="skill-title">
+            <span>App Developer</span><span><span id="seo-percentage">60</span>%</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-bar-inner" id="seo-bar" style="width: 60%;"></div>
+          </div>
+          <button class="btn" onclick="adjustSkill('seo', 10)">+</button>
+          <button class="btn" onclick="adjustSkill('seo', -10)">-</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap Script -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    function adjustSkill(skill, adjustment) {
+      const percentageElement = document.getElementById(`${skill}-percentage`);
+      const barElement = document.getElementById(`${skill}-bar`);
+
+      let currentPercentage = parseInt(percentageElement.textContent);
+      let newPercentage = currentPercentage + adjustment;
+
+      if (newPercentage > 100) newPercentage = 100;
+      if (newPercentage < 0) newPercentage = 0;
+
+      percentageElement.textContent = newPercentage;
+      barElement.style.width = newPercentage + '%';
+    }
+  </script>
+</body>
+</html>

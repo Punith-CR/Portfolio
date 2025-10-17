@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Punith C R Portfolio</title>
+  <link rel="icon" type="image/png" href="Images/img.jpg">
+  <link rel="stylesheet" href="index.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <iframe src="https://my.spline.design/nexbotrobotcharacterconcept-e3vNjJyaolA3xuI2fBSP94cP/" frameborder="0" width="100%" height="100%"></iframe>
+  <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3">
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <img src="Images/img.jpg" alt="Logo" style="width: 35px; height: 35px; border-radius: 50%; margin-right: 10px;">
+      Punith C R.
+  </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="Aboutme.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="MyJourney.html">Education</a></li>
+        <li class="nav-item"><a class="nav-link" href="MySkills.html">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="ContactMe.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container hero-section">
+    <div class="row align-items-center">
+      
+      <div class="col-md-6 hero-text">
+        <h1>Hi, I'm <strong>Punith C R</strong></h1>
+        <h2>And i'am a  <span id="role-text" class="highlight">Java FullStack Developer</span></h2>
+
+        <p class="col-md-6 hero-text">
+            <h6>Hello! I'm Punith C R, a passionate and dedicated 
+            Full Stack Developer with a strong foundation in Java, Spring Boot,
+            HTML, CSS, Bootstrap, and MySQL. I recently graduated from
+            Reva University 2025,
+            and I'm currently sharpening my skills through hands-on projects and real-world applications.</h6>
+        </p>
+        <div class="mt-4">
+          <a href="HireMe.html" class="btn btn-primary me-2">Hire Me</a>
+          <a href="HireMe.html" class="btn btn-outline-light">Let's Talk</a>
+        </div>
+        <div class="social-icons mt-4">
+          <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+          <a href="https://www.linkedin.com/in/punith-c-r-28baa82b8/"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/Punith-CR"><i class="fab fa-github"></i></a>
+          <a href="https://web.whatsapp.com/"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://www.instagram.com/puniith__46/"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      
+     
+
+  <div class="stats-container">
+    <div class="stat-box">
+      <div class="stat-number">0-1</div>
+      <div class="stat-label">Years of experience</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-number">4+</div>
+      <div class="stat-label">Projects completed</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-number">5+</div>
+      <div class="stat-label">Technologies mastered</div>
+    </div>
+  </div>
+  
+<section class="container my-5" id="myServices">
+  <h2 class="text-center mb-5" style="color: #2f8fe4;">My <span style="color: white;">Services</span></h2>
+  <div class="row g-4 justify-content-center">
+   
+    <div class="col-md-4">
+      <div class="service-box text-center p-4 rounded">
+        <i class="fas fa-code fa-3x mb-3 text-primary"></i>
+        <h4>Web Development</h4>
+        <p>I offer high-quality web development services, creating responsive and interactive websites tailored to clients' needs.</p>
+        <button class="btn btn-outline-light">Read More</button>
+      </div>
+    </div>
+    
+    <div class="col-md-4">
+      <div class="service-box text-center p-4 rounded">
+        <i class="fas fa-pencil-alt fa-3x mb-3 text-primary"></i>
+        <h4>Graphic Design</h4>
+        <p>With a creative touch, I provide graphic design services to enhance the visual appeal of websites and digital content.</p>
+        <button class="btn btn-outline-light">Read More</button>
+      </div>
+    </div>
+    
+    <div class="col-md-4">
+      <div class="service-box text-center p-4 rounded">
+        <i class="fas fa-chart-bar fa-3x mb-3 text-primary"></i>
+        <h4>Digital Marketing</h4>
+        <p>I offer digital marketing solutions to help businesses increase their online presence and reach a wider audience.</p>
+        <button class="btn btn-outline-light">Read More</button>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+  const roles = [
+    "Frontend Developer",
+    "Backend Developer",
+    "Graphics Designer",
+    "Web Developer"
+   
+  ];
+
+  const roleText = document.getElementById("role-text");
+  let roleIndex = 0;
+  let charIndex = 0;
+  let typing = true;
+
+  function typeEffect() {
+    const currentRole = roles[roleIndex];
+
+    if (typing) {
+      roleText.textContent = currentRole.substring(0, charIndex++);
+      if (charIndex > currentRole.length) {
+        typing = false;
+        setTimeout(typeEffect, 1500); // pause after typing
+        return;
+      }
+    } else {
+      roleText.textContent = currentRole.substring(0, charIndex--);
+      if (charIndex === 0) {
+        typing = true;
+        roleIndex = (roleIndex + 1) % roles.length;
+      }
+    }
+
+    setTimeout(typeEffect, typing ? 100 : 50); // adjust speed here
+  }
+
+  typeEffect();
+</script>
+
+</body>
+</html>

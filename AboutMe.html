@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Me Section</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+    
+
+    body {
+      background-color: #0d1117;
+      color: #ffffff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding-top: 80px; /* space for fixed header */
+    }
+    
+    .navbar {
+      background-color: #161b22;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+      color: #ffffff !important;
+    }
+
+    .navbar-nav .nav-link {
+      position: relative;
+      color: white !important;
+      margin: 0 10px;
+      font-weight: 500;
+      padding: 5px 0;
+      transition: color 0.3s ease-in-out;
+    }
+
+    .navbar-nav .nav-link::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background: #2f8fe4;
+      transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+    }
+
+    .navbar-nav .nav-link:hover::before {
+      width: 100%;
+      left: 0;
+    }
+
+    .navbar-nav .nav-link:hover {
+      color: #2f8fe4 !important;
+      text-shadow: 0 0 8px #2f8fe4;
+    }
+
+    .about-section {
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .about-section h1 {
+      font-size: 2.5rem;
+      color: #58a6ff;
+      margin-bottom: 1rem;
+    }
+
+    .about-section p {
+      color: #c9d1d9;
+      margin-top: 1rem;
+      font-size: 1rem;
+    }
+
+    .image-container {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      margin: 0 auto;
+    }
+
+    .image-container img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      border: 5px solid #161b22;
+    }
+
+    .image-container::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 5px solid #58a6ff;
+      border-radius: 50%;
+      animation: rotate 5s linear infinite;
+    }
+
+    @keyframes rotate {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .btn-primary {
+      background-color: #238636;
+      color: #ffffff;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+      margin-top: 1.5rem;
+      border-radius: 5px;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    .btn-primary:hover {
+      background-color: #2ea043;
+      transform: scale(1.05);
+    }
+    /* image */
+
+    .image-container::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: calc(100% + 20px);
+  height: calc(100% + 20px);
+  border-radius: 50%;
+  box-shadow: 0 0 20px 5px #58a6ff;
+  animation: rotate-glow 4s linear infinite;
+  z-index: 0;
+}
+@keyframes rotate-glow {
+  0% {
+    transform: rotate(0deg);
+    box-shadow: 0 0 15px 5px #58a6ff;
+  }
+  50% {
+    box-shadow: 0 0 30px 10px #58a6ff;
+  }
+  100% {
+    transform: rotate(360deg);
+    box-shadow: 0 0 15px 5px #58a6ff;
+  }
+}
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container-fluid px-5">
+      <a class="navbar-brand d-flex align-items-center" href="Aboutme.html">
+        <img src="Images/img.jpg" alt="Logo" style="width: 35px; height: 35px; border-radius: 50%; margin-right: 10px;">
+        Punith C R.
+    </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="AboutMe.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="MyJourney.html">Education</a></li>
+          <li class="nav-item"><a class="nav-link" href="MySkills.html">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="ContactMe.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="about-section">
+    <h1>About <span style="color: #ffffff;">Me</span></h1>
+    <div class="image-container">
+      <img src="Images/punithimg.jpg" alt="Profile Picture">
+    </div>
+    <h2 class="mt-3">Full Stack Developer!</h2>
+    <pre><h6>
+      My focus is on building responsive, user-friendly web applications. I enjoy turning complex problems into clean, efficient solutions.
+      Whether it's front-end design or back-end logic, I strive to create seamless and scalable applications.</h6>
+    </pre>
+    <a href="https://drive.google.com/file/d/13KcMO51szpqC9gfa3zaKzeALK5JdJe0h/view?usp=sharing"><button class="btn btn-primary">Read More</button></a>
+  </div>
+
+</body>
+</html>

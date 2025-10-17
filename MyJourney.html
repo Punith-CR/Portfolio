@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Journey</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #0d1117;
+            color: white;
+        }
+        iframe {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+            border: none;
+        }
+        .section-title {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #00aaff;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .card {
+            background-color: #161b22;
+            border: none;
+            color: white;
+        }
+
+        .card-title {
+            color: #00aaff;
+        }
+
+        .navbar {
+      background-color: #161b22;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+      color: #ffffff !important;
+    }
+
+    .navbar-nav .nav-link {
+      position: relative;
+      color: white !important;
+      margin: 0 10px;
+      font-weight: 500;
+      padding: 5px 0;
+      transition: color 0.3s ease-in-out;
+    }
+
+    .navbar-nav .nav-link::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background: #2f8fe4;
+      transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+    }
+
+    .navbar-nav .nav-link:hover::before {
+      width: 100%;
+      left: 0;
+    }
+
+    .navbar-nav .nav-link:hover {
+      color: #2f8fe4 !important;
+      text-shadow: 0 0 8px #2f8fe4;
+    }
+    </style>
+</head>
+
+<body>
+    <iframe src="https://my.spline.design/particles-fiRqhGP77Rj6wDD65XrKbFNc/" allowfullscreen></iframe>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="MyJourney.html">
+                <img src="Images/img.jpg" alt="Logo" style="width: 35px; height: 35px; border-radius: 50%; margin-right: 10px;">
+                Punith C R.
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+                <ul class="navbar-nav">
+                  <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                  <li class="nav-item"><a class="nav-link" href="AboutMe.html">About</a></li>
+                  <li class="nav-item"><a class="nav-link" href="MyJourney.html">Education</a></li>
+                  <li class="nav-item"><a class="nav-link" href="MySkills.html">Skills</a></li>
+                  <li class="nav-item"><a class="nav-link" href="ContactMe.html">Contact</a></li>
+                </ul>
+              </div>
+        </div>
+    </nav>
+
+    <!-- Content Section -->
+    <div class="container mt-5">
+        <h1 class="section-title">My Journey</h1>
+        <div class="row">
+            <!-- Education Section -->
+            <div class="col-md-6">
+                <h3 class="text-center">Education</h3>
+                <div class="card mb3">
+                    <div class="card-body">
+                        <h5 class="card-title">2024 - 2025</h5>
+                        <p class="card-text">Master of Computer Application - Reva University</p>
+                        <p> Postgraduate in Computer Applications with strong foundation in Software Development and Data Management</p>
+                    </div>
+                </div>
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">2021 - 2023</h5>
+                        <p class="card-text">Bachelor OF Computer Application - Om Sai Degree College</p>
+                        <p>Bachelor with skill in programming, databases, and web technologies.</p>
+                    </div>
+                </div>
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">2019 - 2020</h5>
+                        <p class="card-text">Pre-University College -  RNS Pre University College</p>
+                        <p>PUC in Science (PCME - Physic,Chemistry,Mathematics & Electronic) with Strong foundation in Electronics concepts. </p>
+                    </div>
+                </div>
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">2008 - 2018</h5>
+                        <p class="card-text">Secondary School Leaving Certificate - St Benedict's CBSE School</p>
+                        <p>Completed Primary Schooling .</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Experience Section -->
+            <div class="col-md-6">
+                <h3 class="text-center">Projects</h3>
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">2024 - 2025</h5>
+                        <p class="card-text">Parkinson's Disease Analysis And Prediction</p>
+                        <p>Developed a Machine Learning -based model to predict Parkinson's disease using Biomedical voice measurements.</p>
+                    </div>
+                </div>
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">2022 - 2023</h5>
+                        <p class="card-text">Emotion detection in Online Social Network</p>
+                        <p>Automated emotion recognition is typically performed by measuring various human body parameater or electric implusesin the nervous system and analyzing their changes.</p>
+                    </div>
+                </div>
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">2024 - 2025</h5>
+                        <p class="card-text">Portofolio - Company</p>
+                        <p>allows potential clients, partners, and employers to find your business through search engines and social media easily.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
